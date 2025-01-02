@@ -8,8 +8,9 @@ static const char unknown_str[] = "???";
 #define MAXLEN 2048
 
 static const struct arg args[] = {
-	/* function format          argument */
-	{ datetime, " %s",           "%H:%M" },
-	{ datetime, " |  %s",           "%F" },
-    { run_command, " | %s ",     "sh ~/.config/slstatus/commands/battery.sh" },
+	/* function format argument */
+	{ datetime,                   " %s",           "%H:%M" },
+	{ datetime,                   " |  %s",        "%F"    },
+    { keymap,                     " |   %s",        NULL   },
+    { run_command,                " | %s ",         "sh ~/.config/slstatus/commands/battery.sh" },
 };
